@@ -60,14 +60,15 @@ paritcipants = {
 
 def remove_odd_even(list1, even):
     if even == True:
-        for i in list1:
+        for i in set(list1):
             if i % 2 == 0:
                 list1.remove(i)
         print(list1)
     if even == False:
-        for i in list1:
-            if i % 2 != 0:
+        for i in set(list1):
+            if i % 2 == 1:
                 list1.remove(i)
         print(list1)
 
 remove_odd_even([1, 3, 5, 6, 8, 9], True)
+remove_odd_even([1, 3, 5, 6, 8, 9], False)
