@@ -22,12 +22,11 @@ def even_odd(num):
 #even_odd(num)
 
 def age_title(list_ages, new_age):
-    for i in list_ages:
-        if max(i) < new_age:
+        if max(list_ages) < new_age:
             print("oldest")
-        if min(i) > new_age:
+        if min(list_ages) > new_age:
             print("youngest")
-        if max(i) > new_age > min(i):
+        if max(list_ages) > new_age > min(list_ages):
             print("between")
 
 #new_age = int("age please")
@@ -59,3 +58,16 @@ paritcipants = {
 
 #intruders(invited, paritcipants)
 
+def remove_odd_even(list1, even):
+    if even == True:
+        for i in list1:
+            if i % 2 == 0:
+                list1.remove(i)
+        print(list1)
+    if even == False:
+        for i in list1:
+            if i % 2 != 0:
+                list1.remove(i)
+        print(list1)
+
+remove_odd_even([1, 3, 5, 6, 8, 9], True)
