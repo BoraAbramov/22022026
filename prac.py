@@ -70,5 +70,39 @@ def remove_odd_even(list1, even):
                 list1.remove(i)
         print(list1)
 
-remove_odd_even([1, 3, 5, 6, 8, 9], True)
-remove_odd_even([1, 3, 5, 6, 8, 9], False)
+
+def big_and_small(a: int, b: int, c: int):
+    return max(a, b, c), min(a, b, c)
+
+
+def get_grade_value(grade: int) -> str:
+    if 80 <= grade <= 100:
+        return "A"
+    elif grade >= 60:
+        return "B"
+    elif grade >= 40:
+        return "C"
+    elif grade >= 0:
+        return "D"
+
+
+def calc_statistics(grades: list, oper: str) -> int:
+    import statistics
+    if oper == "maximum":
+        return max(grades)
+    if oper == "minimum":
+        return min(grades)
+    if oper == "average":
+        return statistics.mean(grades)
+    if oper == "sum":
+        return sum(grades)
+    if oper == "length":
+        return len(grades)
+
+#print(calc_statistics ([40, 50, 60], "maximum"))  # 60
+#print(calc_statistics ([40, 50, 60], "minimum"))  # 40
+#print(calc_statistics ([40, 50, 60], "length"))  # 3
+#print(calc_statistics ([40, 50, 60], "sum"))  # 150
+#print(calc_statistics ([40, 50, 60], "average"))  # 50
+
+
