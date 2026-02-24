@@ -6,7 +6,7 @@ def num_print(start, stop):
     if start < stop:
         _min = start
         _max = stop
-    elif start > stop:
+    if start > stop:
         _min = stop
         _max = start
 
@@ -15,17 +15,19 @@ def num_print(start, stop):
         _st_list.append(i)
         i += 1
 
+    if start < stop:
+        for item in _st_list:
+            print(item, end=" ")
+            time.sleep(0.5)
     if start > stop:
-        _st_list(reversed = True)
-        print(_st_list)
-    elif start < stop:
-        print(_st_list)
-    else:
-        print(start)
+        print(_st_list[::-1])
+
 
 print("please follow the instruction and the program will print all numbers in between")
 
-time.sleep(2)
+time.sleep(1)
+num1 = 0
+num2 = 0
 
 while True:
     num1 = input("Enter first number: ")
