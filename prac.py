@@ -104,5 +104,3 @@ def calc_statistics(grades: list, oper: str) -> int:
 #print(calc_statistics ([40, 50, 60], "length"))  # 3
 #print(calc_statistics ([40, 50, 60], "sum"))  # 150
 #print(calc_statistics ([40, 50, 60], "average"))  # 50
-
-
