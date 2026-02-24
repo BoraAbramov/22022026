@@ -20,7 +20,9 @@ def num_print(start, stop):
             print(item, end=" ")
             time.sleep(0.5)
     if start > stop:
-        print(_st_list[::-1])
+        for item in _st_list[::-1]:
+            print(item, end=" ")
+            time.sleep(0.5)
 
 
 print("please follow the instruction and the program will print all numbers in between")
